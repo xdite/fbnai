@@ -46,9 +46,5 @@ class User < ActiveRecord::Base
     fb_id.to_i > 0
   end
 
-
-
-
-
-
 end
+

@@ -71,8 +71,8 @@ module FBFetcher
     end
   end
 
-  def get_stream_photo(user)
-    @graph = Koala::Facebook::API.new(user.token)
+  def get_stream_photo
+    @graph = Koala::Facebook::API.new(token)
     feeds = @graph.get_connections("me", "home")
     feeds.each do |feed|
       if feed["type"] == "photo"
