@@ -6,6 +6,8 @@ class User
       define_method "find_or_create_for_#{provider}" do |response|
         uid = response["uid"]
         data = response["info"]
+      
+        credentials= response['credentials']
 
         if user = User.where( :fb_id => uid).first
           return user
@@ -13,7 +15,7 @@ class User
           user.update_attribute(:fb_id ,uid )
           return user
         else
-          user = User.new_from_provider_data(provider,uid,data)
+          user = User.new_from_provider_data(provider,uid,data, credentials)
           if user.save(:validate => false)
             user.fb_id = uid
             user.save
@@ -28,10 +30,10 @@ class User
     end
      
     
-    def new_from_provider_data(provider, uid, data)
+    def new_from_provider_data(provider, uid, data,credentials)
       user = User.new
       user.email = data["email"]
-      
+      user.token = credentials['token']
       user.name = data["nickname"] ? data ["nickname"] : data["name"]
 
       user.name.gsub!(/[^\w]/, "_")

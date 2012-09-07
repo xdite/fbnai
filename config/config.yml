@@ -1,6 +1,8 @@
 defaults: &defaults
   app_name: "FB9"
   domain: "http://fbnai.dev"    
+  facebook_app_id: 493662323994614
+  facebook_secret: 33c5842087788fe8de050cf1d57499c6
   admin_emails: 
     - "xuite.joke@gmail.com"
   google_analytics_key: ""
