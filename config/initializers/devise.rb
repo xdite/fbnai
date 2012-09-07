@@ -42,6 +42,8 @@ Devise.setup do |config|
   # modifying a user and when used to authenticate or find a user. Default is :email.
   config.strip_whitespace_keys = [ :email ]
 
+  config.omniauth :facebook, Setting.facebook_app_id, Setting.facebook_secret, :scope => "email, user_subscriptions, friends_photos, read_stream"
+  
   # Tell if authentication through request.params is enabled. True by default.
   # It can be set to an array that will enable params authentication only for the
   # given strategies, for example, `config.params_authenticatable = [:database]` will

@@ -12,6 +12,12 @@ gem "settingslogic"
 gem "devise"
 # bootstrap
 
+
+gem "omniauth"
+gem "oauth2"
+gem "omniauth-facebook"
+
+
 gem "will_paginate"
 gem "simple_form", :git => "https://github.com/plataformatec/simple_form.git"
 gem "bootstrap_helper", "2.1.0"

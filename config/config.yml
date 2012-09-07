@@ -1,8 +1,8 @@
 defaults: &defaults
-  app_name: "Bootstrap Demo Rails App"
-  domain: "http://bootstrap-demo.dev"    
+  app_name: "FB9"
+  domain: "http://fbnai.dev"    
   admin_emails: 
-    - "xdite@rocodev.com"
+    - "xuite.joke@gmail.com"
   google_analytics_key: ""
   default_logo_url: "/logo.png"
 
