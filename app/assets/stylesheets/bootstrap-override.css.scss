@@ -1,7 +1,32 @@
+@import "compass/css3";
+
 body{
+  background: url('images/bright_squares.png');
   padding-top: 60px;
 }
 
 .pagination {
   text-align: right;
+}
+
+.navbar {
+  .brand, .nav > li > a {
+    color: #dedede;
+    text-shadow: 0 -2px 1px #000;
+    @include transition(color 100ms linear);
+
+    &:hover {
+      color: #fefefe;
+    }
+  }
+  .navbar-inner {
+    background: url('images/starring.png');
+  }
+  .navbar-search {
+    input.search-query {
+      height: 15px;
+      line-height: 15px;
+      margin-top: 2px;
+    }
+  }
 }
