@@ -17,6 +17,8 @@ gem "omniauth"
 gem "oauth2"
 gem "omniauth-facebook"
 
+gem 'koala'
+gem 'nokogiri'
 
 gem "will_paginate"
 gem "simple_form", :git => "https://github.com/plataformatec/simple_form.git"
